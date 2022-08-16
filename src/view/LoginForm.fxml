@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="logingPane" maxHeight="769.0" maxWidth="443.0" minHeight="769.0" minWidth="443.0" prefHeight="769.0" prefWidth="443.0" style="-fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <JFXTextField fx:id="txtLoginName" labelFloat="true" layoutX="81.0" layoutY="437.0" prefHeight="34.0" prefWidth="282.0" promptText="User Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="80.0" layoutY="499.0" onAction="#btnLogin" prefHeight="45.0" prefWidth="282.0" ripplerFill="#574fc9" style="-fx-background-color: #0984e3;" text="Log In" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="146.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/2641333.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="50.0" prefWidth="443.0" style="-fx-background-color: #0984e3;" styleClass="header" stylesheets="@../styles/style.css">
+         <children>
+            <Label prefHeight="50.0" prefWidth="100.0" text="Chat Room" textFill="WHITE" wrapText="true">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="396.0" layoutY="2.0" onAction="#btnClose" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 50px;" text="❌" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="350.0" layoutY="2.0" onAction="#btnMinimize" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 50px;" text="🔻" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="741.0" prefWidth="443.0" text="1.0 v" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
