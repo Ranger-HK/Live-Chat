@@ -16,7 +16,6 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 
-
 public class LoginFormController {
     public JFXTextField txtLoginName;
     public AnchorPane logingPane;

@@ -29,9 +29,7 @@ public class ServerFormController implements Initializable {
     }
 
     public void btnClose(ActionEvent actionEvent) {
-        /*if (serverSocket != null) {
-            serverSocket.close();
-        }*/
+
         Stage stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
         stage.close();
     }
@@ -51,16 +49,12 @@ public class ServerFormController implements Initializable {
                 while (true) {
                     Socket accept = serverSocket.accept();
                     System.out.println("Connect new");
-                    ClientConnection connection = new ClientConnection(accept, this,"user");
+                    ClientConnection connection = new ClientConnection(accept, this, "user");
                     connectionList.add(connection);
 
                     Thread thread = new Thread(connection);
                     thread.start();
 
-                    /*InputStreamReader inputStreamReader = new InputStreamReader(accept.getInputStream());
-                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                    String readLine = bufferedReader.readLine();
-                    System.out.println(readLine);*/
 
                 }
 

@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,20 +14,23 @@
    <children>
       <JFXTextField fx:id="txtLoginName" labelFloat="true" layoutX="81.0" layoutY="437.0" prefHeight="34.0" prefWidth="282.0" promptText="User Name">
          <font>
-            <Font size="14.0" />
+            <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXButton layoutX="80.0" layoutY="499.0" onAction="#btnLogin" prefHeight="45.0" prefWidth="282.0" ripplerFill="#574fc9" style="-fx-background-color: #0984e3;" text="Log In" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton layoutX="80.0" layoutY="499.0" onAction="#btnLogin" prefHeight="45.0" prefWidth="282.0" ripplerFill="#151168" style="-fx-background-color: #16a085; -fx-background-radius: 10;" text="Log In" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="146.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/2641333.png" />
+            <Image url="@../assets/login.png" />
          </image>
       </ImageView>
-      <AnchorPane prefHeight="50.0" prefWidth="443.0" style="-fx-background-color: #0984e3;" styleClass="header" stylesheets="@../styles/style.css">
+      <AnchorPane prefHeight="50.0" prefWidth="443.0" style="-fx-background-color: #16a085;" styleClass="header" stylesheets="@../styles/style.css">
          <children>
             <Label prefHeight="50.0" prefWidth="100.0" text="Chat Room" textFill="WHITE" wrapText="true">
                <padding>
@@ -40,14 +44,23 @@
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
             <JFXButton layoutX="350.0" layoutY="2.0" onAction="#btnMinimize" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 50px;" text="🔻" textFill="WHITE">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="741.0" prefWidth="443.0" text="1.0 v" textAlignment="CENTER" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="741.0" prefWidth="443.0" text="2.0 v" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
    </children>
 </AnchorPane>

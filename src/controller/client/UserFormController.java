@@ -13,7 +13,6 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 
-
 public class UserFormController {
     public TextField txtMsgInput;
     public TextArea txtMsgDisplay;
@@ -29,14 +28,12 @@ public class UserFormController {
 
     public void btnMinimize(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-        // is stage minimizable into task bar. (true | false)
         stage.setIconified(true);
     }
 
     public void btnSend(ActionEvent actionEvent) throws IOException {
         printWriter = new PrintWriter(socket.getOutputStream());
         printWriter.println(userName + " : " + txtMsgInput.getText());
-//        txtMsgDisplay.appendText("laki : "+txtMsgInput.getText().trim()+"\n");
         printWriter.flush();
     }
 
@@ -45,7 +42,6 @@ public class UserFormController {
         System.out.println("userName is : " + userName);
         socket = new Socket(ConnectionUtil.host, ConnectionUtil.port);
         txtMsgDisplay.appendText("Connect. \n");
-//            txtMsgDisplay.appendText( Data.userName+"\n");
         printWriter = new PrintWriter(socket.getOutputStream());
         TaskReadThread task = new TaskReadThread(socket, this);
         Thread thread = new Thread(task);
@@ -53,9 +49,4 @@ public class UserFormController {
 
     }
 
-    /*public void broadcast(String message) {
-        for (ClientConnection clientConnection : this.connectionList) {
-            clientConnection.sendMessage(message);
-        }
-    }*/
 }

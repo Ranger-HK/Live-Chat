@@ -1,10 +1,7 @@
 package controller.server;
 
-import controller.server.ServerFormController;
-
 import java.io.*;
 import java.net.Socket;
-
 
 
 public class ClientConnection implements Runnable {
@@ -12,8 +9,7 @@ public class ClientConnection implements Runnable {
     private final ServerFormController server;
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
-//    private PrintWriter printWriter;
-    private String user;
+    private final String user;
 
     public ClientConnection(Socket socket, ServerFormController server, String user) {
         this.accept = socket;
@@ -37,7 +33,7 @@ public class ClientConnection implements Runnable {
 
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 accept.close();
             } catch (IOException ex) {
@@ -53,7 +49,7 @@ public class ClientConnection implements Runnable {
         try {
             PrintWriter printWriter = new PrintWriter(accept.getOutputStream());
             printWriter.println(message);
-            System.out.println("He hee : "+message);
+            System.out.println("He hee : " + message);
             printWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();

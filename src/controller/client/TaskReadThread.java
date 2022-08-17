@@ -23,16 +23,6 @@ public class TaskReadThread implements Runnable {
             try {
                 reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 String message = reader.readLine();
-
-                /*InputStreamReader inputStreamReader = new InputStreamReader(accept.getInputStream());
-                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                    String readLine = bufferedReader.readLine();
-                    System.out.println(readLine);*/
-
-                /*Platform.runLater(()->{
-                    System.out.println("message : "+message);
-                    client.txtMsgDisplay.appendText(message+"\n");
-                });*/
                 client.txtMsgDisplay.appendText(message + "\n");
             } catch (IOException e) {
                 e.printStackTrace();

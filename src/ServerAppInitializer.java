@@ -11,7 +11,6 @@ import javafx.stage.StageStyle;
 import java.net.URL;
 
 
-
 public class ServerAppInitializer extends Application {
     private double xOffset = 0;
     private double yOffset = 0;
@@ -26,16 +25,16 @@ public class ServerAppInitializer extends Application {
         load.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                xOffset=event.getSceneX();
-                yOffset=event.getSceneY();
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
             }
         });
 
         load.setOnMouseDragged(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                primaryStage.setX(event.getScreenX()-xOffset);
-                primaryStage.setY(event.getScreenY()-yOffset);
+                primaryStage.setX(event.getScreenX() - xOffset);
+                primaryStage.setY(event.getScreenY() - yOffset);
             }
         });
 
