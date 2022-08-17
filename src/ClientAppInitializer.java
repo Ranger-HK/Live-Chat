@@ -30,6 +30,9 @@ public class ClientAppInitializer extends Application {
             }
         });
 
+
+
+
         load.setOnMouseDragged(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
